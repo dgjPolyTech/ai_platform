@@ -104,21 +104,21 @@ final_model.summary()
  
 baseline_history = baseline_model.fit(train_data,
                                       train_labels,
-                                      epochs=100,
+                                      epochs=200,
                                       batch_size=512,
                                       validation_data=(test_data, test_labels),
                                       verbose=2)
  
 smaller_history = smaller_model.fit(train_data,
                                     train_labels,
-                                    epochs=100,
+                                    epochs=200,
                                     batch_size=512,
                                     validation_data=(test_data, test_labels),
                                     verbose=2)
  
 bigger_history = bigger_model.fit(train_data,
                                   train_labels,
-                                  epochs=100,
+                                  epochs=200,
                                   batch_size=512,
                                   validation_data=(test_data, test_labels),
                                   verbose=2)
@@ -126,21 +126,21 @@ bigger_history = bigger_model.fit(train_data,
  
 l2_history = l2_model.fit(train_data,
                                       train_labels,
-                                      epochs=100,
+                                      epochs=200,
                                       batch_size=512,
                                       validation_data=(test_data, test_labels),
                                       verbose=2)
  
 dpt_history = dpt_model.fit(train_data,
                                       train_labels,
-                                      epochs=100,
+                                      epochs=200,
                                       batch_size=512,
                                       validation_data=(test_data, test_labels),
                                       verbose=2)
  
 final_history = final_model.fit(train_data,
                                       train_labels,
-                                      epochs=100,
+                                      epochs=200,
                                       batch_size=512,
                                       validation_data=(test_data, test_labels),
                                       verbose=2)
@@ -166,4 +166,4 @@ plot_history([('baseline', baseline_history),
               ('bigger', bigger_history),
               ('l2', l2_history),
               ('dropout', dpt_history),
-              ('L2+Dropout', final_history)])
+              ('L2+Dropout', final_history)], key='accuracy')
